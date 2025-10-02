@@ -1,0 +1,75 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - introducing
+  - affirm
+  - deny
+  - ask_products
+  - ask_product_detail
+  - add_to_cart
+  - add_item
+  - order_status
+  - shipping_info
+  - return_policy
+  - contact_support
+
+entities:
+  - product
+
+slots:
+  product:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: product
+
+responses:
+  utter_greet:
+    - text: "Hello! Welcome to Tea & Coffee Shop ☕. How can I help you today?"
+
+  utter_goodbye:
+    - text: "Goodbye 👋! Come back for more tea and coffee anytime."
+  utter_introduction:
+    - text: "Hi 👋! I'm the Taste_trove AI Assistant, you can use me to\n✅ Find products\n✅ Track your orders\n✅ Get details and prices of the products\n\nBy submitting a question to this Chatbot you are agreeing to the terms of use which can be found HERE\n\nYou can close me and come back to me at any time.\nTo re-open me use the button at the bottom-right of your screen.\n\nWhat can I help you with?"
+  utter_affirm:
+    - text: "👍 Great!"
+    - text: "Okay, let’s continue!"
+    
+  utter_deny:
+    - text: "❌ Okay, cancelling that."
+    - text: "Alright, let’s try something else."
+
+ 
+
+  utter_add_to_cart:
+    - text: "✅ {product} has been added to your cart."
+
+
+  utter_show_cart:
+    - text: "🛒 Here’s what’s in your cart right now: [This will show cart items when connected to backend]"
+
+ 
+
+  utter_order_status:
+    - text: "📦 Checking your order status... (this will connect to your backend soon)"
+
+  utter_shipping_info:
+    - text: "🚚 We deliver within 3–5 business days."
+
+  utter_return_policy:
+    - text: "🔄 Returns accepted within 14 days."
+
+  utter_contact_support:
+    - text: "📞 Contact support at support@teacoffee.com"
+
+  utter_faq:
+    - text: "ℹ️ For general questions, feel free to ask anything!"
+
+actions:
+  - action_show_items
+  - action_add_item
+  - action_product_details
+

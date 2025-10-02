@@ -1,0 +1,132 @@
+version: "3.1"
+
+stories:
+
+- story: greet and browse products
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_products
+    - action: action_show_items
+
+
+- story: introducing me
+  steps:
+    - intent: introducing
+    - action: utter_introduction
+
+- story: show items
+  steps:
+    - intent: ask_products
+    - action: action_show_items
+
+- story: product details
+  steps:
+    - intent: ask_product_detail
+    - slot_was_set:
+        - product: "Earl Grey"   
+    - action: action_product_details
+
+- story: add item (admin/testing)
+  steps:
+    - intent: add_item
+    - action: action_add_item
+
+- story: add product to cart
+  steps:
+    - intent: add_to_cart
+      entities:
+        - product: "Latte"
+    - slot_was_set:
+        - product: "Latte"
+    - action: utter_add_to_cart
+
+
+
+- story: order status inquiry
+  steps:
+    - intent: order_status
+    - action: utter_order_status
+
+- story: faq - shipping
+  steps:
+    - intent: shipping_info
+    - action: utter_shipping_info
+
+- story: faq - returns
+  steps:
+    - intent: return_policy
+    - action: utter_return_policy
+
+- story: contact support
+  steps:
+    - intent: contact_support
+    - action: utter_contact_support
+
+- story: goodbye flow
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+
+- story: user confirms after seeing items
+  steps:
+    - action: action_show_items
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after seeing items
+  steps:
+    - action: action_show_items
+    - intent: deny
+    - action: utter_deny
+
+- story: user confirms after product details
+  steps:
+    - action: action_product_details
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after product details
+  steps:
+    - action: action_product_details
+    - intent: deny
+    - action: utter_deny
+
+- story: user confirms after add to cart
+  steps:
+    - action: utter_add_to_cart
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after add to cart
+  steps:
+    - action: utter_add_to_cart
+    - intent: deny
+    - action: utter_deny
+
+- story: user confirms after show cart
+  steps:
+    - action: utter_show_cart
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after show cart
+  steps:
+    - action: utter_show_cart
+    - intent: deny
+    - action: utter_deny
+
+- story: user confirms after order status
+  steps:
+    - action: utter_order_status
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after order status
+  steps:
+    - action: utter_order_status
+    - intent: deny
+    - action: utter_deny
+

@@ -1,0 +1,392 @@
+version: "3.1"
+
+nlu:
+# 🔹 Greetings
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+    - hey there
+    - hi bot
+    - hello assistant
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - talk to you soon
+    - catch you later
+    - bye bye
+    - see ya
+
+- intent: introduction
+  examples: |
+    - can you introduce yourself?
+    - tell me about yourself
+    - what you do? 
+    - hey,who are you?
+    - tell me what you do?
+
+  
+- intent: affirm
+  examples: |
+    - yes
+    - of course
+    - sure
+    - definitely
+    - sounds good
+    - yup
+    - alright
+    - this is exactly what i was looking for
+
+- intent: deny
+  examples: |
+    - no
+    - not now
+    - maybe later
+    - don’t
+    - no thanks
+    - not really
+    - no i want a different item
+
+# 🔹 Product search
+- intent: ask_products
+  examples: |
+    - show me teas
+    - what coffee do you have?
+    - I want to see your drinks
+    - list all products
+    - show me all items
+    - what kinds of tea are available?
+    - do you have coffee?
+    - what can I order?
+    - I want to browse
+    - show me all coffees
+    - show me all teas you have
+    - list your drinks menu
+    - what drinks are available?
+    - show me the menu
+    - I want to see the coffee menu
+    - do you sell herbal teas?
+    - what kinds of drinks do you offer?
+    - can I see all your products?
+    - show me what I can buy
+    - list all teas and coffees
+
+
+# 🔹 Ask about specific product
+- intent: ask_product_detail
+  examples: |
+    - tell me about [Espresso Roast](product)
+    - what is in [Espresso Roast](product)?
+    - price of [Espresso Roast](product)?
+    - describe [Espresso Roast](product)
+    - tell me about [Cappuccino](product)
+    - what is in [Cappuccino](product)?
+    - price of [Cappuccino](product)?
+    - describe [Cappuccino](product)
+    - tell me about [Latte](product)
+    - what is in [Latte](product)?
+    - price of [Latte](product)?
+    - describe [Latte](product)
+    - tell me about [Green Tea](product)
+    - what is in [Green Tea](product)?
+    - price of [Green Tea](product)?
+    - describe [Green Tea](product)
+    - tell me about [Black Tea](product)
+    - what is in [Black Tea](product)?
+    - price of [Black Tea](product)?
+    - describe [Black Tea](product)
+    - tell me about [Chamomile Tea](product)
+    - what is in [Chamomile Tea](product)?
+    - price of [Chamomile Tea](product)?
+    - describe [Chamomile Tea](product)
+    - tell me about [Earl Grey](product)
+    - what is in [Earl Grey](product)?
+    - price of [Earl Grey](product)?
+    - describe [Earl Grey](product)
+    - tell me about [Mocha](product)
+    - what is in [Mocha](product)?
+    - price of [Mocha](product)?
+    - describe [Mocha](product)
+    - tell me about [Americano](product)
+    - what is in [Americano](product)?
+    - price of [Americano](product)?
+    - describe [Americano](product)
+    - tell me about [Flat White](product)
+    - what is in [Flat White](product)?
+    - price of [Flat White](product)?
+    - describe [Flat White](product)
+    - tell me about [Herbal Tea Mix](product)
+    - what is in [Herbal Tea Mix](product)?
+    - price of [Herbal Tea Mix](product)?
+    - describe [Herbal Tea Mix](product)
+    - tell me about [Chai Latte](product)
+    - what is in [Chai Latte](product)?
+    - price of [Chai Latte](product)?
+    - describe [Chai Latte](product)
+    - tell me about [Iced Coffee](product)
+    - what is in [Iced Coffee](product)?
+    - price of [Iced Coffee](product)?
+    - describe [Iced Coffee](product)
+    - tell me about [Iced Latte](product)
+    - what is in [Iced Latte](product)?
+    - price of [Iced Latte](product)?
+    - describe [Iced Latte](product)
+    - tell me about [Matcha Latte](product)
+    - what is in [Matcha Latte](product)?
+    - price of [Matcha Latte](product)?
+    - describe [Matcha Latte](product)
+    - tell me about [Oolong Tea](product)
+    - what is in [Oolong Tea](product)?
+    - price of [Oolong Tea](product)?
+    - describe [Oolong Tea](product)
+    - tell me about [Peach Tea](product)
+    - what is in [Peach Tea](product)?
+    - price of [Peach Tea](product)?
+    - describe [Peach Tea](product)
+    - tell me about [Vanilla Latte](product)
+    - what is in [Vanilla Latte](product)?
+    - price of [Vanilla Latte](product)?
+    - describe [Vanilla Latte](product)
+    - tell me about [Caramel Macchiato](product)
+    - what is in [Caramel Macchiato](product)?
+    - price of [Caramel Macchiato](product)?
+    - describe [Caramel Macchiato](product)
+    - tell me about [Rooibos Tea](product)
+    - what is in [Rooibos Tea](product)?
+    - price of [Rooibos Tea](product)?
+    - describe [Rooibos Tea](product)
+    - tell me about [Peppermint Tea](product)
+    - what is in [Peppermint Tea](product)?
+    - price of [Peppermint Tea](product)?
+    - describe [Peppermint Tea](product)
+    - tell me about [Hazelnut Latte](product)
+    - what is in [Hazelnut Latte](product)?
+    - price of [Hazelnut Latte](product)?
+    - describe [Hazelnut Latte](product)
+    - tell me about [Turmeric Latte](product)
+    - what is in [Turmeric Latte](product)?
+    - price of [Turmeric Latte](product)?
+    - describe [Turmeric Latte](product)
+    - tell me about [Irish Coffee](product)
+    - what is in [Irish Coffee](product)?
+    - price of [Irish Coffee](product)?
+    - describe [Irish Coffee](product)
+    - tell me about [Coconut Latte](product)
+    - what is in [Coconut Latte](product)?
+    - price of [Coconut Latte](product)?
+    - describe [Coconut Latte](product)
+    - tell me about [Berry Herbal Tea](product)
+    - what is in [Berry Herbal Tea](product)?
+    - price of [Berry Herbal Tea](product)?
+    - describe [Berry Herbal Tea](product)
+    - tell me about [Cinnamon Tea](product)
+    - what is in [Cinnamon Tea](product)?
+    - price of [Cinnamon Tea](product)?
+    - describe [Cinnamon Tea](product)
+    - tell me about [Almond Milk Latte](product)
+    - what is in [Almond Milk Latte](product)?
+    - price of [Almond Milk Latte](product)?
+    - describe [Almond Milk Latte](product)
+    - tell me about [Dark Chocolate Mocha](product)
+    - what is in [Dark Chocolate Mocha](product)?
+    - price of [Dark Chocolate Mocha](product)?
+    - describe [Dark Chocolate Mocha](product)
+    - tell me about [Ginger Tea](product)
+    - what is in [Ginger Tea](product)?
+    - price of [Ginger Tea](product)?
+    - describe [Ginger Tea](product)
+    - tell me about [Honey Lemon Tea](product)
+    - what is in [Honey Lemon Tea](product)?
+    - price of [Honey Lemon Tea](product)?
+    - describe [Honey Lemon Tea](product)
+    - tell me about [Caramel Latte](product)
+    - what is in [Caramel Latte](product)?
+    - price of [Caramel Latte](product)?
+    - describe [Caramel Latte](product)
+    - tell me about [White Chocolate Mocha](product)
+    - what is in [White Chocolate Mocha](product)?
+    - price of [White Chocolate Mocha](product)?
+    - describe [White Chocolate Mocha](product)
+    - tell me about [Jasmine Tea](product)
+    - what is in [Jasmine Tea](product)?
+    - price of [Jasmine Tea](product)?
+    - describe [Jasmine Tea](product)
+    - tell me about [Blackberry Tea](product)
+    - what is in [Blackberry Tea](product)?
+    - price of [Blackberry Tea](product)?
+    - describe [Blackberry Tea](product)
+    - tell me about [Mocha Frappe](product)
+    - what is in [Mocha Frappe](product)?
+    - price of [Mocha Frappe](product)?
+    - describe [Mocha Frappe](product)
+    - tell me about [Iced Matcha](product)
+    - what is in [Iced Matcha](product)?
+    - price of [Iced Matcha](product)?
+    - describe [Iced Matcha](product)
+    - tell me about [Choco Latte](product)
+    - what is in [Choco Latte](product)?
+    - price of [Choco Latte](product)?
+    - describe [Choco Latte](product)
+    - tell me about [Mint Tea](product)
+    - what is in [Mint Tea](product)?
+    - price of [Mint Tea](product)?
+    - describe [Mint Tea](product)
+    - tell me about [Vanilla Cold Brew](product)
+    - what is in [Vanilla Cold Brew](product)?
+    - price of [Vanilla Cold Brew](product)?
+    - describe [Vanilla Cold Brew](product)
+    - tell me about [Peach Cold Tea](product)
+    - what is in [Peach Cold Tea](product)?
+    - price of [Peach Cold Tea](product)?
+    - describe [Peach Cold Tea](product)
+    - tell me about [Chili Mocha](product)
+    - what is in [Chili Mocha](product)?
+    - price of [Chili Mocha](product)?
+    - describe [Chili Mocha](product)
+    - tell me about [Lemon Green Tea](product)
+    - what is in [Lemon Green Tea](product)?
+    - price of [Lemon Green Tea](product)?
+    - describe [Lemon Green Tea](product)
+    - tell me about [Vanilla Rooibos](product)
+    - what is in [Vanilla Rooibos](product)?
+    - price of [Vanilla Rooibos](product)?
+    - describe [Vanilla Rooibos](product)
+    - tell me about [Café au Lait](product)
+    - what is in [Café au Lait](product)?
+    - price of [Café au Lait](product)?
+    - describe [Café au Lait](product)
+    - tell me about [Strawberry Herbal Tea](product)
+    - what is in [Strawberry Herbal Tea](product)?
+    - price of [Strawberry Herbal Tea](product)?
+    - describe [Strawberry Herbal Tea](product)
+    - tell me about [Hazelnut Cold Brew](product)
+    - what is in [Hazelnut Cold Brew](product)?
+    - price of [Hazelnut Cold Brew](product)?
+    - describe [Hazelnut Cold Brew](product)
+    - tell me about [Chamomile Cold Tea](product)
+    - what is in [Chamomile Cold Tea](product)?
+    - price of [Chamomile Cold Tea](product)?
+    - describe [Chamomile Cold Tea](product)
+    - tell me about [Caramel Iced Latte](product)
+    - what is in [Caramel Iced Latte](product)?
+    - price of [Caramel Iced Latte](product)?
+    - describe [Caramel Iced Latte](product)
+    - tell me about [Ginger Lemon Tea](product)
+    - what is in [Ginger Lemon Tea](product)?
+    - price of [Ginger Lemon Tea](product)?
+    - describe [Ginger Lemon Tea](product)
+    - tell me about [Mocha Latte](product)
+    - what is in [Mocha Latte](product)?
+    - price of [Mocha Latte](product)?
+    - describe [Mocha Latte](product)
+    - tell me about [Vanilla Herbal Tea](product)
+    - what is in [Vanilla Herbal Tea](product)?
+    - price of [Vanilla Herbal Tea](product)?
+    - describe [Vanilla Herbal Tea](product
+
+
+- intent: add_to_cart
+  examples: |
+    - add [Earl Grey](product) to my cart
+    - I want [Latte](product)
+    - put [Green Tea](product) in the cart
+    - can you add [Cappuccino](product) to my basket?
+    - order [Americano](product)
+    - add [Mocha](product)
+    - please add [Flat White](product) to my order
+    - get me a [Chai Latte](product)
+    - I’d like [Espresso Roast](product)
+    - add [Herbal Tea Mix](product) to my cart
+    - put [Iced Coffee](product) in my basket
+    - order [Iced Latte](product)
+    - add [Matcha Latte](product) to my cart
+    - I want [Oolong Tea](product)
+    - add [Peach Tea](product)
+    - add [Vanilla Latte](product) to my order
+    - put [Caramel Macchiato](product) in my cart
+    - add [Rooibos Tea](product)
+    - I’d like [Peppermint Tea](product)
+    - add [Hazelnut Latte](product) to my basket
+    - I want [Turmeric Latte](product)
+    - add [Irish Coffee](product)
+    - add [Coconut Latte](product) to my cart
+    - I want [Berry Herbal Tea](product)
+    - add [Cinnamon Tea](product)
+    - I’d like [Almond Milk Latte](product)
+    - add [Dark Chocolate Mocha](product)
+    - add [Ginger Tea](product) to my basket
+    - I want [Honey Lemon Tea](product)
+    - add [Caramel Latte](product)
+    - put [White Chocolate Mocha](product) in my cart
+    - I’d like [Jasmine Tea](product)
+    - add [Blackberry Tea](product)
+    - add [Mocha Frappe](product) to my order
+    - I want [Iced Matcha](product)
+    - add [Choco Latte](product)
+    - I’d like [Mint Tea](product)
+    - add [Vanilla Cold Brew](product)
+    - put [Peach Cold Tea](product) in my basket
+    - I want [Chili Mocha](product)
+    - add [Lemon Green Tea](product)
+    - I’d like [Vanilla Rooibos](product)
+    - add [Café au Lait](product)
+    - I want [Strawberry Herbal Tea](product)
+    - add [Hazelnut Cold Brew](product)
+    - I’d like [Chamomile Cold Tea](product)
+    - add [Caramel Iced Latte](product)
+    - I want [Ginger Lemon Tea](product)
+    - add [Mocha Latte](product)
+    - I’d like [Vanilla Herbal Tea](product)
+    - add [Café Mocha](product)
+
+
+
+
+
+- intent: add_item
+  examples: |
+      - Add a new test tea
+      - Create a product for testing
+      - Insert a new item
+
+# 🔹 Order support
+- intent: order_status
+  examples: |
+    - where is my order?
+    - track my delivery
+    - order status
+    - has my package been shipped?
+    - check my order
+    - is my tea on the way?
+    - when will my coffee arrive?
+
+# 🔹 General FAQs
+- intent: shipping_info
+  examples: |
+    - do you ship internationally?
+    - what are the delivery options?
+    - how long does shipping take?
+    - do you deliver on weekends?
+    - is express shipping available?
+
+- intent: return_policy
+  examples: |
+    - what is your return policy?
+    - can I return my order?
+    - how do I get a refund?
+    - do you accept returns?
+    - what if my tea is damaged?
+
+- intent: contact_support
+  examples: |
+    - I need help
+    - contact customer support
+    - I want to talk to someone
+    - help me please
+    - support team please

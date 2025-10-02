@@ -1,0 +1,140 @@
+version: "3.1"
+
+rules:
+
+
+- rule: Greet the user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: introduce yourself
+  steps:
+    - intent: introduction
+    - action: utter_introduction
+
+
+- rule: Say affirm
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Say deny
+  steps:
+    - intent: deny
+    - action: utter_deny
+
+
+- rule: Show products on request
+  steps:
+    - intent: ask_products
+    - action: action_show_items
+
+- rule: Affirm after showing items
+  steps:
+    - action: action_show_items
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Deny after showing items
+  steps:
+    - action: action_show_items
+    - intent: deny
+    - action: utter_deny
+
+
+- rule: Provide product details
+  steps:
+    - intent: ask_product_detail
+    - action: action_product_details
+
+- rule: Affirm after product details
+  steps:
+    - action: action_product_details
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Deny after product details
+  steps:
+    - action: action_product_details
+    - intent: deny
+    - action: utter_deny
+
+
+- rule: Add item for admin/testing
+  steps:
+    - intent: add_item
+    - action: action_add_item
+
+- rule: Add product to cart
+  steps:
+    - intent: add_to_cart
+    - action: utter_add_to_cart
+
+- rule: Affirm after adding to cart
+  steps:
+    - action: utter_add_to_cart
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Deny after adding to cart
+  steps:
+    - action: utter_add_to_cart
+    - intent: deny
+    - action: utter_deny
+
+
+
+
+- rule: User confirms after show cart
+  steps:
+    - action: utter_show_cart
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: User denies after show cart
+  steps:
+    - action: utter_show_cart
+    - intent: deny
+    - action: utter_deny
+
+
+
+
+
+- rule: Order status
+  steps:
+    - intent: order_status
+    - action: utter_order_status
+
+- rule: Affirm after order status
+  steps:
+    - action: utter_order_status
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Deny after order status
+  steps:
+    - action: utter_order_status
+    - intent: deny
+    - action: utter_deny
+
+- rule: Shipping info FAQ
+  steps:
+    - intent: shipping_info
+    - action: utter_shipping_info
+
+- rule: Return policy FAQ
+  steps:
+    - intent: return_policy
+    - action: utter_return_policy
+
+- rule: Contact support FAQ
+  steps:
+    - intent: contact_support
+    - action: utter_contact_support

@@ -1,0 +1,298 @@
+
+
+.chatbot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+/* White theme container with gradient background */
+.white-theme-container {
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  position: relative;
+  order: 1;
+}
+
+.white-theme-container.hidden {
+  display: none !important;
+}
+
+.white-theme-container.visible {
+  display: block !important;
+}
+
+/* Rasa holder */
+.rasa-holder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Rasa wrapper */
+.rasa-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+
+.white-theme-container .rcw-widget-container,
+.white-theme-container .rcw-conversation-container {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 20px !important;
+}
+
+
+.white-theme-container .rcw-messages-container {
+  background: white !important;
+  background-color: white !important;
+  margin: 10px !important;
+  border-radius: 15px !important;
+  width: calc(100% - 20px) !important;
+  height: calc(100% - 80px) !important;
+  border: 3px solid white !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+
+.white-theme-container .rcw-sender {
+  background: white !important;
+  background-color: white !important;
+  margin: 0 10px 10px 10px !important;
+  border-radius: 20px !important;
+  width: calc(100% - 20px) !important;
+  border: 3px solid white !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+
+
+.white-theme-container .rcw-new-message {
+  background: white !important;
+  border: 1px solid #d1d5db !important;
+  color: #374151 !important;
+  border-radius: 15px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+}
+
+.white-theme-container .rcw-new-message:focus {
+  border-color: #3b82f6 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+}
+
+
+.white-theme-container .rcw-send {
+  background: white !important;
+  border: 1px solid #3b82f6 !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.white-theme-container .rcw-send:hover {
+  background: #3b82f6 !important;
+}
+
+.white-theme-container .rcw-send-icon {
+  fill: #3b82f6 !important;
+  color: #3b82f6 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.white-theme-container .rcw-send:hover .rcw-send-icon {
+  fill: white !important;
+  color: white !important;
+}
+
+
+.white-theme-container .rcw-bubble {
+  background: white !important;
+  border: 1px solid #e5e7eb !important;
+  color: #374151 !important;
+  border-radius: 18px !important;
+  padding: 12px 16px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.white-theme-container .rcw-client .rcw-bubble {
+  background: #3b82f6 !important;
+  color: white !important;
+  border: none !important;
+  margin-left: auto !important;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3) !important;
+}
+
+
+.white-theme-container .rcw-response .rcw-bubble {
+  background: white !important;
+  color: #374151 !important;
+  border: 1px solid #e5e7eb !important;
+  margin-right: auto !important;
+}
+
+.white-theme-container .rcw-reply {
+  background: white !important;
+  border: 1px solid #3b82f6 !important;
+  color: #3b82f6 !important;
+  border-radius: 16px !important;
+  margin: 4px !important;
+  padding: 8px 12px !important;
+  font-size: 13px !important;
+  transition: all 0.2s ease !important;
+}
+
+.white-theme-container .rcw-reply:hover {
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+
+.white-theme-container .rcw-typing {
+  background: #f8fafc !important;
+  border-radius: 16px !important;
+  padding: 10px 15px !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+
+.white-theme-container .rcw-timestamp,
+.white-theme-container .rcw-avatar {
+  display: none !important;
+}
+
+
+.chatbot-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  order: 2;
+}
+
+.reset-chat-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-weight: 600;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.reset-chat-button:hover {
+  background: linear-gradient(135deg, #5a6fd8, #6a4190);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Taste_Trove AI Assistant Button */
+.text-launcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-weight: 600;
+  min-width: 200px;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.text-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.text-launcher.active {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.launcher-text {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chat-indicator {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.chat-indicator.open {
+  transform: rotate(180deg);
+}
+
+
+@keyframes forceGradient {
+  0%, 100% { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  }
+}
+
+.white-theme-container,
+.white-theme-container .rcw-widget-container {
+  animation: forceGradient 5s infinite !important;
+}
+
+
+.white-theme-container [style*="purple"],
+.white-theme-container [style*="rgb"] {
+  background: white !important;
+  color: #374151 !important;
+}
+
+
+@media (max-width: 768px) {
+  .white-theme-container {
+    width: 350px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .white-theme-container {
+    width: 300px;
+    height: 450px;
+  }
+  
+  .chatbot-controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
