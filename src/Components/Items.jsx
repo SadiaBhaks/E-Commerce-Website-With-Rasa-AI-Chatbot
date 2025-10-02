@@ -109,3 +109,4 @@ function ItemCard({ item, favourites, toggleFavourite, addToCart }) {
 }
 
 export default Items;
+

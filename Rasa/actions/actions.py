@@ -4,7 +4,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-BASE_URL = "http://localhost:4000/api"  
+BASE_URL = "https://e-commerce-website-with-rasa-ai-chatbot.onrender.com/api"
+  
 
 
 class ActionShowItems(Action):
