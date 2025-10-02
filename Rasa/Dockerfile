@@ -1,5 +1,6 @@
 # Use official Rasa image
-FROM rasa/rasa:3.8.0
+FROM rasa/rasa:3.7.6
+
 
 # Copy your bot files
 COPY . /app
