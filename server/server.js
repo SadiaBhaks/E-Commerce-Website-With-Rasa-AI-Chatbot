@@ -6,7 +6,7 @@ import fs from 'fs';
 import multer from 'multer';
 import sharp from 'sharp';
 import pool from './db.js'; // MySQL connection pool
-import authRoutes from './routes/auth.js'; // Auth routes
+import authRoutes from './Routes/auth.js'; // Auth routes
 
 dotenv.config();
 
