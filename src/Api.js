@@ -1,6 +1,6 @@
 // src/api.js
 
-const API_BASE = "https://backend-ecommerce-qdzy.onrender.com/api";
+const API_BASE = "https://backend-ecommerce-qdzy.onrender.com/";
 
 // -------------------- Backend API --------------------
 
