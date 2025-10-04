@@ -23,7 +23,7 @@ export default function Chatbot() {
         {
           initPayload: "/greet",
           customData: { language: "en" },
-          socketUrl: "http://localhost:5005",
+          socketUrl: "https://backend-ecommerce-qdzy.onrender.com",
           socketPath: "/socket.io/",
           hideWidgetHeader: true,
           showMessageIcon: false,
