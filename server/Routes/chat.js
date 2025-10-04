@@ -6,7 +6,7 @@ app.post("/api/chat", async (req, res) => {
     const { message } = req.body;
 
     // Replace this with your actual Rasa Render URL
-    const rasaURL = "https://e-commerce-website-with-rasa-ai-chatbot-8.onrender.com";
+    const rasaURL = "https://rasa-bot2-9orb.onrender.com/webhooks/rest/webhook";
 
     const response = await axios.post(rasaURL, {
       sender: "user1", // you can use user id from auth
