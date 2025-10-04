@@ -11,36 +11,35 @@ import authRoutes from './Routes/auth.js'; // Auth routes
 dotenv.config();
 
 const app = express();
+
+// -------------------- CORS --------------------
+// Allow requests from any origin (frontend hosted anywhere)
 app.use(cors({ origin: "*" }));
 
 // Middleware
-//app.use(cors());
 app.use(express.json());
 
-// Serve uploaded images
-app.use('/uploads', express.static('uploads'));
+// -------------------- Serve uploaded images --------------------
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
 
 // -------------------- Multer + Sharp setup --------------------
-const storage = multer.memoryStorage(); // store in memory temporarily
+const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
-// Upload endpoint (resizes to 400x300)
 app.post('/api/upload', upload.single('image'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
 
-    // Ensure uploads folder exists
-    const uploadDir = 'uploads';
+    const uploadDir = path.join(process.cwd(), 'uploads');
     if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir);
 
-    // Unique filename
     const filename = Date.now() + path.extname(req.file.originalname);
     const filepath = path.join(uploadDir, filename);
 
-    // Resize and save image
     await sharp(req.file.buffer).resize(400, 300).toFile(filepath);
 
-    const imageUrl = `http://localhost:${process.env.PORT || 4000}/uploads/${filename}`;
+    // Use actual backend URL in deployment
+    const imageUrl = `${process.env.BACKEND_URL || `http://localhost:${process.env.PORT || 4000}`}/uploads/${filename}`;
     res.json({ imageUrl });
   } catch (err) {
     console.error(err);
@@ -54,7 +53,7 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
 app.get('/api/test', async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT 1 + 1 AS result');
-    res.json(rows[0]); // { "result": 2 }
+    res.json(rows[0]);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Database connection failed' });
@@ -88,11 +87,12 @@ app.post('/api/items', async (req, res) => {
 });
 
 // -------------------- Auth Routes --------------------
-// All auth routes will be under /api/auth (register, login)
 app.use('/api/auth', authRoutes);
 
 // -------------------- Start server --------------------
 const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));
-
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
+  console.log(`✅ Backend URL: ${process.env.BACKEND_URL || `http://localhost:${PORT}`}`);
+});
 
