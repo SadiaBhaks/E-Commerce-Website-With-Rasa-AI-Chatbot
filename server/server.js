@@ -11,9 +11,10 @@ import authRoutes from './Routes/auth.js'; // Auth routes
 dotenv.config();
 
 const app = express();
+app.use(cors({ origin: "*" }));
 
 // Middleware
-app.use(cors());
+//app.use(cors());
 app.use(express.json());
 
 // Serve uploaded images
