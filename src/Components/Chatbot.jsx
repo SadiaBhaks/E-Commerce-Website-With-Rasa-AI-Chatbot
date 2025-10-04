@@ -23,7 +23,7 @@ export default function Chatbot() {
         {
           initPayload: "/greet",
           customData: { language: "en" },
-          socketUrl: "https://backend-ecommerce-qdzy.onrender.com",
+          socketUrl: "https://rasa-bot2-9orb.onrender.com",
           socketPath: "/socket.io/",
           hideWidgetHeader: true,
           showMessageIcon: false,
