@@ -1,6 +1,6 @@
 // src/api.js
 
-const API_BASE = "https://e-commerce-website-with-rasa-ai-chatbot.onrender.com/api";
+const API_BASE = "https://backend-ecommerce-qdzy.onrender.com";
 
 // -------------------- Backend API --------------------
 
@@ -40,6 +40,4 @@ export async function registerUser(user) {
   return res.json();
 }
 
-// -------------------- Note --------------------
-// The Rasa chatbot is now handled by WebChat via WebSocket in Chatbot.jsx,
-// so no REST call for chat is needed here anymore.
+
