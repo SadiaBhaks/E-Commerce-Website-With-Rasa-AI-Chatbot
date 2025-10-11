@@ -100,7 +100,7 @@ function ItemCard({ item, favourites, toggleFavourite, addToCart }) {
 
       <button
         onClick={() => addToCart(item)}
-        className="bg-green-600 mt-3 p-2 text-white rounded-lg w-full hover:bg-gray-600 hover:text-black transition"
+        className="bg-green-600 mt-3  xt-white rounded-lg w-full hover:bg-gray-600 hover:text-black transition"
       >
         Add To Cart
       </button>
