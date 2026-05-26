@@ -1,76 +1,102 @@
-E-Commerce Website with Rasa AI Chatbot
+# E-Commerce Website with Rasa AI Chatbot
 
 An intelligent full-stack e-commerce platform integrated with a conversational AI chatbot powered by Rasa Open Source. This project combines modern web development with Natural Language Processing (NLP) to create a smarter and more interactive online shopping experience.
 
 The system was designed to simulate real-world e-commerce workflows while integrating AI-driven customer assistance for product discovery, support automation, and conversational interaction.
 
-GitHub Repository:
-E-Commerce Website With Rasa AI Chatbot
+---
 
-Overview
+# Overview
 
 This project integrates a traditional e-commerce architecture with a conversational AI assistant capable of understanding user intents and providing contextual responses.
 
 The platform focuses on:
 
-Intelligent customer interaction
-Conversational product assistance
-AI-driven support automation
-Full-stack e-commerce workflows
-Scalable backend communication
-NLP-powered chatbot integration
+- Intelligent customer interaction
+- Conversational product assistance
+- AI-driven support automation
+- Full-stack e-commerce workflows
+- Scalable backend communication
+- NLP-powered chatbot integration
 
 The application demonstrates the combination of software engineering principles and conversational AI technologies to enhance user engagement and automate customer support processes.
 
-Core Features
-E-Commerce Platform
-Product browsing system
-Dynamic product catalog
-Shopping workflow architecture
-User interaction management
-Responsive storefront design
-Scalable backend structure
-AI Chatbot Integration
-Conversational AI assistant
-Intent recognition using NLP
-Context-aware dialogue management
-Product-related assistance
-Customer support automation
-Real-time chatbot interaction
-Natural Language Processing
-Intent classification
-Entity extraction
-Dialogue flow management
-Conversational training pipelines
-Custom response handling
-Backend Services
-API-driven architecture
-Client-server communication
-Chatbot request handling
-Session-based interactions
-Modular backend services
-Tech Stack
-Frontend
-HTML5
-CSS3
-JavaScript
-Responsive UI Design
-Backend
-Python
-Flask / Backend Services
-REST API Architecture
-Conversational AI
-Rasa Open Source
-Rasa NLU
-Rasa Core
-Dialogue Management
-Intent Recognition
-Database
-SQL / Structured Data Storage
-Product Information Storage
-User Interaction Data
-Software Architecture
-System Architecture
+---
+
+# Core Features
+
+## E-Commerce Platform
+
+- Product browsing system
+- Dynamic product catalog
+- Shopping workflow architecture
+- User interaction management
+- Responsive storefront design
+- Scalable backend structure
+
+## AI Chatbot Integration
+
+- Conversational AI assistant
+- Intent recognition using NLP
+- Context-aware dialogue management
+- Product-related assistance
+- Customer support automation
+- Real-time chatbot interaction
+
+## Natural Language Processing
+
+- Intent classification
+- Entity extraction
+- Dialogue flow management
+- Conversational training pipelines
+- Custom response handling
+
+## Backend Services
+
+- API-driven architecture
+- Client-server communication
+- Chatbot request handling
+- Session-based interactions
+- Modular backend services
+
+---
+
+# Tech Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive UI Design
+
+## Backend
+
+- Python
+- Flask / Backend Services
+- REST API Architecture
+
+## Conversational AI
+
+- Rasa Open Source
+- Rasa NLU
+- Rasa Core
+- Dialogue Management
+- Intent Recognition
+
+## Database
+
+- SQL / Structured Data Storage
+- Product Information Storage
+- User Interaction Data
+
+---
+
+# Software Architecture
+
+## System Architecture
+
+```text
 ┌─────────────────────────────────────┐
 │             Client Layer            │
 │     E-Commerce Web Application      │
@@ -94,12 +120,13 @@ System Architecture
 ┌─────────────────────────────────────┐
 │            Database Layer           │
 │      Product & User Information     │
+
 └─────────────────────────────────────┘
+
 Conversational AI Architecture
 
 The chatbot system is powered by Rasa, an open-source conversational AI framework designed for intent recognition and dialogue management.
 
-Chatbot Pipeline
 User Message
       │
       ▼
@@ -116,6 +143,9 @@ Custom Actions / Backend APIs
       │
       ▼
 Bot Response Generation
+
+
+
 AI Features
 Intent classification
 Entity recognition
@@ -156,7 +186,7 @@ API Structure
 /api/users
 Rasa Chatbot Integration
 
-Rasa is integrated as the conversational intelligence layer for the platform. Open-source Rasa architectures are widely used for dialogue management and NLP-based assistants.
+Rasa is integrated as the conversational intelligence layer for the platform.
 
 Key Components
 NLU (Natural Language Understanding)
@@ -214,7 +244,7 @@ Create Virtual Environment
 python -m venv venv
 Activate Virtual Environment
 Windows
-venv\\Scripts\\activate
+venv\Scripts\activate
 Linux / macOS
 source venv/bin/activate
 Install Dependencies
@@ -263,14 +293,10 @@ AI personalization engine
 Author
 Sadia Bhaks
 
-Computer Science Student & Full Stack Software Engineer from Bangladesh
+Computer Science Student & Full Stack Software Engineer
 
 Focused on scalable systems, intelligent software solutions, conversational AI, backend engineering, and research-oriented application development.
 
-References
-Rasa Open Source Framework
-Conversational AI Architectures using Rasa
-Rasa Community Integration Discussions
 License
 
 This project is licensed under the MIT License.
